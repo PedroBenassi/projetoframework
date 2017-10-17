@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="home-body">
+    <div class="wrapper">
+           <!-- Sidebar Holder -->
+           <nav id="sidebar">
+               <div class="sidebar-header text-center" id="sidebarCollapse">
+                 <br>
+                 <strong>MENU</strong>
+               </div>
+
+               <ul class="list-unstyled components">
+                 <li class="active">
+                     <a href="#cadastrar" data-toggle="collapse" aria-expanded="false"><i class="fa fa-plus" aria-hidden="true"></i>Cadastrar</a>
+                     <ul class="collapse list-unstyled" id="cadastrar">
+                         <li><a href="#">Instituto</a></li>
+                         <li><a href="#">Departamento</a></li>
+                         <li id="cadastrarCurso"><a href="#">Curso</a></li>
+                         <li><a href="#">Disciplina</a></li>
+                         <li><a href="#">Aluno</a></li>
+                         <li><a href="#">Professor</a></li>
+                         <li><a href="#">Turma</a></li>
+                         <li><a href="#">Período</a></li>
+                     </ul>
+                 </li>
+                 <li>
+                     <a href="#buscar" data-toggle="collapse" aria-expanded="false"><i class="fa fa-search" aria-hidden="true"></i>Buscar</a>
+                     <ul class="collapse list-unstyled" id="buscar">
+                       <li><a href="#">Instituto</a></li>
+                       <li><a href="#">Departamento</a></li>
+                       <li><a href="#">Curso</a></li>
+                       <li><a href="#">Disciplina</a></li>
+                       <li><a href="#">Aluno</a></li>
+                       <li><a href="#">Professor</a></li>
+                       <li><a href="#">Turma</a></li>
+                       <li><a href="#">Período</a></li>
+                     </ul>
+                 </li>
+                 <li>
+                     <a href="#editar" data-toggle="collapse" aria-expanded="false"><i class="fa fa-pencil" aria-hidden="true"></i>Editar</a>
+                     <ul class="collapse list-unstyled" id="editar">
+                       <li><a href="#">Instituto</a></li>
+                       <li><a href="#">Departamento</a></li>
+                       <li><a href="#">Curso</a></li>
+                       <li><a href="#">Disciplina</a></li>
+                       <li><a href="#">Aluno</a></li>
+                       <li><a href="#">Professor</a></li>
+                       <li><a href="#">Turma</a></li>
+                       <li><a href="#">Período</a></li>
+                     </ul>
+                 </li>
+               </ul>
+           </nav>
+
+           <!-- Page Content Holder -->
+           <div id="content">
+
+            </div>
+
+            <div class="section">
+              <div class="container">
+
+              </div>
+            </div>
+       </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+       $(document).ready(function () {
+           $('#sidebarCollapse').on('click', function () {
+               $('#sidebar').toggleClass('active');
+           });
+       });
+    </script>
+    <script>
+            $("#cadastrarCurso").click(function(){
+                $(".container").load("cadastroCurso.html");
+            });
+
+            $("#page2").click(function(){
+                $("#custom_body").load("2.html");
+            });
+
+            $("#page3").click(function(){
+                $("#custom_body").load("3.html");
+            });
+    </script>
+
+
+  </body>
+</html>
