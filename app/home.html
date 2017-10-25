@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -21,75 +24,86 @@
     <![endif]-->
   </head>
   <body class="home-body">
-    <div class="wrapper">
-           <!-- Sidebar Holder -->
-           <nav id="sidebar">
-               <div class="sidebar-header text-center" id="sidebarCollapse">
-                 <br>
-                 <strong>MENU</strong>
-               </div>
+      <div class="wrapper">
+             <!-- Sidebar Holder -->
+             <nav id="sidebar">
+                 <div class="sidebar-header text-center" id="sidebarCollapse">
+                   <br>
+                   <strong>MENU</strong>
+                 </div>
 
-               <ul class="list-unstyled components">
-                 <li class="active">
-                     <a href="#cadastrar" data-toggle="collapse" aria-expanded="false"><i class="fa fa-plus" aria-hidden="true"></i>Cadastrar</a>
-                     <ul class="collapse list-unstyled" id="cadastrar">
+                 <ul class="list-unstyled components">
+                   <li>
+                       <a href="#buscar" data-toggle="collapse" aria-expanded="false"><i class="fa fa-search" aria-hidden="true"></i>Buscar</a>
+                       <ul class="collapse list-unstyled" id="buscar">
                          <li><a href="#">Instituto</a></li>
                          <li><a href="#">Departamento</a></li>
-                         <li id="cadastrarCurso"><a href="#">Curso</a></li>
+                         <li><a href="#">Curso</a></li>
                          <li><a href="#">Disciplina</a></li>
                          <li><a href="#">Aluno</a></li>
                          <li><a href="#">Professor</a></li>
                          <li><a href="#">Turma</a></li>
                          <li><a href="#">Período</a></li>
-                     </ul>
-                 </li>
-                 <li>
-                     <a href="#buscar" data-toggle="collapse" aria-expanded="false"><i class="fa fa-search" aria-hidden="true"></i>Buscar</a>
-                     <ul class="collapse list-unstyled" id="buscar">
-                       <li><a href="#">Instituto</a></li>
-                       <li><a href="#">Departamento</a></li>
-                       <li><a href="#">Curso</a></li>
-                       <li><a href="#">Disciplina</a></li>
-                       <li><a href="#">Aluno</a></li>
-                       <li><a href="#">Professor</a></li>
-                       <li><a href="#">Turma</a></li>
-                       <li><a href="#">Período</a></li>
-                     </ul>
-                 </li>
-                 <li>
-                     <a href="#editar" data-toggle="collapse" aria-expanded="false"><i class="fa fa-pencil" aria-hidden="true"></i>Editar</a>
-                     <ul class="collapse list-unstyled" id="editar">
-                       <li><a href="#">Instituto</a></li>
-                       <li><a href="#">Departamento</a></li>
-                       <li><a href="#">Curso</a></li>
-                       <li><a href="#">Disciplina</a></li>
-                       <li><a href="#">Aluno</a></li>
-                       <li><a href="#">Professor</a></li>
-                       <li><a href="#">Turma</a></li>
-                       <li><a href="#">Período</a></li>
-                     </ul>
-                 </li>
-               </ul>
-           </nav>
+                       </ul>
+                   </li>
+                   <li class="active">
+                       <a href="#cadastrar" data-toggle="collapse" aria-expanded="false"><i class="fa fa-plus" aria-hidden="true"></i>Cadastrar</a>
+                       <ul class="collapse list-unstyled" id="cadastrar">
+                           <li><a data-toggle="modal" data-target="#cadastrarInstituto">Instituto</a></li>
+                           <li><a data-toggle="modal" data-target="#cadastrarDep">Departamento</a></li>
+                           <li><a data-toggle="modal" data-target="#cadastrarCurso">Curso</a></li>
+                           <li><a data-toggle="modal" data-target="#cadastrarDisc">Disciplina</a></li>
+                           <li><a data-toggle="modal" data-target="#cadastrarAluno">Aluno</a></li>
+                           <li><a data-toggle="modal" data-target="#cadastrarProf" href="#">Professor</a></li>
+                           <li><a data-toggle="modal" data-target="#cadastrarTurma" href="#">Turma</a></li>
+                           <li><a data-toggle="modal" data-target="#cadastrarPeriodo" href="#">Período</a></li>
+                       </ul>
+                   </li>
+                   <li>
+                       <a href="#editar" data-toggle="collapse" aria-expanded="false"><i class="fa fa-pencil" aria-hidden="true"></i>Editar</a>
+                       <ul class="collapse list-unstyled" id="editar">
+                         <li><a href="#">Instituto</a></li>
+                         <li><a href="#">Departamento</a></li>
+                         <li><a href="#">Curso</a></li>
+                         <li><a href="#">Disciplina</a></li>
+                         <li><a href="#">Aluno</a></li>
+                         <li><a href="#">Professor</a></li>
+                         <li><a href="#">Turma</a></li>
+                         <li><a href="#">Período</a></li>
+                       </ul>
+                   </li>
+                 </ul>
+             </nav>
 
-           <!-- Page Content Holder -->
-           <div id="content">
+             <!-- Page Content Holder -->
+             <div id="content"></div>
+             <!-- /Page Content Holder -->
 
-            </div>
+             <!--Modal-->
+             <div w3-include-html="cadastroCurso.html"></div>
+             <div w3-include-html="cadastroInstituto.html"></div>
+             <div w3-include-html="cadastroDep.html"></div>
+             <div w3-include-html="cadastroDisc.html"></div>
+             <div w3-include-html="cadastroAluno.html"></div>
+             <div w3-include-html="cadastroProfessor.html"></div>
+             <div w3-include-html="cadastroTurma.html"></div>
+             <div w3-include-html="cadastroPeriodo.html"></div>
+             <!--/Modal-->
 
-            <div class="section">
-              <div class="container">
-
+              <div class="section">
+                <div class="container">
+                </div>
               </div>
-            </div>
-       </div>
+         </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="jquery-ui.min.js"></script>
     <script type="text/javascript">
        $(document).ready(function () {
            $('#sidebarCollapse').on('click', function () {
@@ -98,19 +112,7 @@
        });
     </script>
     <script>
-            $("#cadastrarCurso").click(function(){
-                $(".container").load("cadastroCurso.html");
-            });
-
-            $("#page2").click(function(){
-                $("#custom_body").load("2.html");
-            });
-
-            $("#page3").click(function(){
-                $("#custom_body").load("3.html");
-            });
+      w3.includeHTML();
     </script>
-
-
   </body>
 </html>

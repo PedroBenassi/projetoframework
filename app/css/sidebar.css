@@ -32,8 +32,8 @@ i, span {
 }
 
 #sidebar {
-    min-width: 250px;
-    max-width: 250px;
+    min-width: 180px;
+    max-width: 180px;
     background: #044f67;
     color: #fff;
     transition: all 0.3s;
@@ -91,6 +91,7 @@ i, span {
     padding: 10px;
     font-size: 1.1em;
     display: block;
+    cursor: pointer;
 }
 #sidebar ul li a:hover {
     color: white;
@@ -156,8 +157,8 @@ a.article, a.article:hover {
 ----------------------------------------------------- */
 @media () {
     #sidebar {
-        min-width: 90px;
-        max-width: 90px;
+        min-width: 100px;
+        max-width: 100px;
         text-align: center;
         margin-left: -80px !important ;
     }

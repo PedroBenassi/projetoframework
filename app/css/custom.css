@@ -64,9 +64,7 @@
   background-color: #f6f7f2; }
 
 .form-cadstro-home {
-  background-color: white;
-  padding: 40px;
-  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.23); }
+  background-color: white; }
 
 body {
   overflow: hidden; }
@@ -86,3 +84,26 @@ body {
   .btn-cadastro:hover {
     color: white !important;
     background-color: #023444; }
+
+.modal-content {
+  border-radius: 0px !important;
+  padding: 30px; }
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.64); }
+
+.btn-collapse {
+  width: 90%;
+  border-radius: 0px !important;
+  text-align: left;
+  outline: none !important;
+  background-color: #044f67;
+  color: white; }
+  .btn-collapse:hover {
+    color: white !important; }
+
+.icon-plus {
+  float: right;
+  padding-top: 10px;
+  color: #044f67;
+  cursor: pointer; }
