@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/fab.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -36,14 +37,14 @@
                    <li>
                        <a href="#buscar" data-toggle="collapse" aria-expanded="false"><i class="fa fa-search" aria-hidden="true"></i>Buscar</a>
                        <ul class="collapse list-unstyled" id="buscar">
-                         <li><a href="#">Instituto</a></li>
-                         <li><a href="#">Departamento</a></li>
-                         <li><a href="#">Curso</a></li>
-                         <li><a href="#">Disciplina</a></li>
-                         <li><a href="#">Aluno</a></li>
-                         <li><a href="#">Professor</a></li>
-                         <li><a href="#">Turma</a></li>
-                         <li><a href="#">Período</a></li>
+                         <li><a href="#" id="instituto">Instituto</a></li>
+                         <li><a href="#" id="departamento">Departamento</a></li>
+                         <li><a href="#" id="curso">Curso</a></li>
+                         <li><a href="#" id="disciplina">Disciplina</a></li>
+                         <li><a href="#" id="alunos">Aluno</a></li>
+                         <li><a href="#" id="professor">Professor</a></li>
+                         <li><a href="#" id="turma">Turma</a></li>
+                         <li><a href="#" id="periodo">Período</a></li>
                        </ul>
                    </li>
                    <li class="active">
@@ -75,6 +76,36 @@
                  </ul>
              </nav>
 
+             <!--fab
+             <div id="hamburger">
+                  <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+              </div>
+              <div class="nav" id="instituto">
+                <i class="material-icons fa fa-graduation-cap" aria-hidden="true"></i>
+              </div>
+              <div class="nav" id="departamento">
+                <i class="material-icons fa fa-graduation-cap" aria-hidden="true"></i>
+              </div>
+              <div class="nav" id="curso">
+                <i class="material-icons fa fa-graduation-cap" aria-hidden="true"></i>
+              </div>
+              <div class="nav" id="disciplina">
+                <i class="material-icons fa fa-graduation-cap" aria-hidden="true"></i>
+              </div>
+              <div class="nav" id="aluno">
+                <i class="material-icons fa fa-graduation-cap" aria-hidden="true"></i>
+              </div>
+              <div class="nav" id="professor">
+                <i class="material-icons fa fa-graduation-cap" aria-hidden="true"></i>
+              </div>
+              <div class="nav" id="turma">
+                <i class="material-icons fa fa-graduation-cap" aria-hidden="true"></i>
+              </div>
+              <div class="nav" id="periodo">
+                <i class="material-icons fa fa-graduation-cap" aria-hidden="true"></i>
+              </div>
+             -->
+
              <!-- Page Content Holder -->
              <div id="content"></div>
              <!-- /Page Content Holder -->
@@ -90,10 +121,14 @@
              <div w3-include-html="cadastroPeriodo.html"></div>
              <!--/Modal-->
 
+             <!--conteudo da página-->
               <div class="section">
-                <div class="container">
+                <div class="container content-busca">
+
                 </div>
               </div>
+              <!--/conteudo da página-->
+
          </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -110,6 +145,19 @@
                $('#sidebar').toggleClass('active');
            });
        });
+    </script>
+    <script>
+            $("#alunos").click(function(){
+                $(".content-busca").load("buscar-aluno.html");
+            });
+
+            $("#page2").click(function(){
+                $(".content-busca").load("2.html");
+            });
+
+            $("#page3").click(function(){
+                $(".content-busca").load("3.html");
+            });
     </script>
     <script>
       w3.includeHTML();

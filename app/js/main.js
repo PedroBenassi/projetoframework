@@ -44,3 +44,9 @@ $(document).ready(function(){
     $(cadastroInstituto).appendTo(".content-predio");
 });
 });
+
+$(document).ready(function(){
+    $('#hamburger').click(function() {
+    $('.nav').toggleClass('show');
+  });
+});

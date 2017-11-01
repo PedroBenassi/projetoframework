@@ -1,0 +1,85 @@
+#hamburger {
+  z-index: 10;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  bottom: 7%;
+  right: 5%;
+  background-color: #c0392b;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 4px 4px 10px rgba(10,10,10,0.6);
+  transition: all 0.2s ease-in-out;
+}
+
+#hamburger:hover{
+  background-color: #b8382b;
+}
+
+.fa-search{
+  color: white;
+}
+
+.nav {
+  z-index: 9;
+  position: fixed;
+  bottom: 10.5%;
+  right: 5.5%;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  visibilty: hidden;
+  opacity: 0;
+  box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.48);
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.material-icons {
+  margin-top: 13px;
+  padding-left: 10px;
+  font-size: 22px;
+  color: rgba(0,0,0,0.54);
+}
+
+#instituto.show {
+  transform: translateY(-125%);
+}
+#departamento.show {
+  transform: translateY(-250%);
+}
+#curso.show {
+  transform: translateY(-375%);
+}
+#disciplina.show {
+  transform: translateY(-500%);
+}
+#aluno.show {
+  transform: translateY(-625%);
+}
+#professor.show {
+  transform: translateY(-750%);
+}
+#turma.show {
+  transform: translateY(-875%);
+}
+#periodo.show {
+  transform: translateY(-1000%);
+}
+#hamburger.show {
+  box-shadow: 7px 7px 10px 0px rgba(0,0,0,0.48);
+}
+
+.nav.show {
+  visibility: visible;
+  opacity: 1;
+}
